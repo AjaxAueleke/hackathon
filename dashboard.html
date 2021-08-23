@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyANMzwi1OMYFHpzOABkoT9tjTXNYO18yzE",
+            authDomain: "fooddeliveryapp-e5942.firebaseapp.com",
+            databaseURL: "https://fooddeliveryapp-e5942-default-rtdb.firebaseio.com",
+            projectId: "fooddeliveryapp-e5942",
+            storageBucket: "fooddeliveryapp-e5942.appspot.com",
+            messagingSenderId: "101468210731",
+            appId: "1:101468210731:web:287013bb9e265c48fc0c6e"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid ">
+    <a class="navbar-brand" href="#">Food App</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="orders.html">Orders</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <h1>
+        Restaurant Dashboard
+    </h1>
+    <div>
+        Add dishes
+        <form action="">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Sign Up</h5>
+                    <p class="card-text">
+                    <form action="">
+                        <div class="mb-3">
+                            <label for="res-item" class="form-label">Item Name</label>
+                            <input type="text" class="form-control" id="res-item" placeholder="Item Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="res-price" class="form-label">Price</label>
+                            <input type="number" class="form-control" id="res-price" placeholder="Price">
+                        </div>
+                        <div class="mb-3">
+                            <label for="res-category">Category</label>
+                            <select class="form-select" id="res-category" aria-label="Default select example">
+                                <option selected>Open this select menu</option>
+                                <option value="Chineese">Chineese</option>
+                                <option value="Thai">Thai</option>
+                                <option value="Pakistani">Pakistani</option>
+                            </select>
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="res-delivery">Delivery Type</label>
+                            <select class="form-select" id="res-delivery" aria-label="Default select example">
+                                <option selected>Open this select menu</option>
+                                <option value="free">Free</option>
+                                <option value="paid">Paid</option>
+                            </select>
+                        </div>
+
+
+
+                        <div class="mb-3">
+                            <button onClick="addProduct()" class="btn btn-primary" type="button">
+                                Add Product
+                            </button>
+                        </div>
+                    </form>
+                    </p>
+                </div>
+            </div>
+        </form>
+
+    </div>
+    <hr>
+    <div>
+        <h1 class= "text-center">Your Dishes</h1>
+        <div id = "all-dishes" class = "row"></div>
+
+    </div>
+    <div></div>
+
+</body>
+<script src="js/restaurant.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+
+</html>

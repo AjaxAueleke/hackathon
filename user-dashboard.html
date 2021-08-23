@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyANMzwi1OMYFHpzOABkoT9tjTXNYO18yzE",
+            authDomain: "fooddeliveryapp-e5942.firebaseapp.com",
+            databaseURL: "https://fooddeliveryapp-e5942-default-rtdb.firebaseio.com",
+            projectId: "fooddeliveryapp-e5942",
+            storageBucket: "fooddeliveryapp-e5942.appspot.com",
+            messagingSenderId: "101468210731",
+            appId: "1:101468210731:web:287013bb9e265c48fc0c6e"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+</head>
+
+<body>
+    <div class="m-md-1">
+
+        <h3 class="text-center">Restaurant List</h1>
+            <hr>
+            <div id="restaurants-list" class="row">
+
+            </div>
+            <hr>
+    </div>
+    <div>
+        <h1>Items Offered</h1>
+        <div id="restaurant-items" class="row">
+        </div>
+    </div>
+</body>
+<script src="/js/userdashboard.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+
+
+</html>
